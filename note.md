@@ -160,3 +160,9 @@ Synchronous = Slow, blocking, simple
 - 📌 fs ready file page(Asynchronous): day3-fs-module-node>index.js
 - 📌 fs read file (Synchronous): day3-fs-module-node>index.js
 - 📌 fs File Write (Asynchronous): day3-fs-module-node>index.js
+
+
+## 📅 DAY 4
+
+### 3rd Day Code Practice:
+- 📌 fs File Write (Synchronous): day4-fs-module-node>index.js
