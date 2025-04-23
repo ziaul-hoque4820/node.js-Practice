@@ -125,35 +125,35 @@ fs Module হলো Node.js এর Core Module, যার মাধ্যমে 
 - কলব্যাক ফাংশনের মাধ্যমে কাজ হয়
 ### ✍️ FS Module-এর প্রধান ফাংশনসমূহ
 🔁 Asynchronous Methods (নন-ব্লকিং)
-fs.readFile(fileName, [options], callback);       // ফাইল পড়ে (Async)
-fs.writeFile(fileName, data, [options], callback); // ফাইল লিখে
-fs.appendFile(file, data, [options], callback);    // ফাইলের শেষে ডেটা যোগ করে
-fs.rename(oldPath, newPath, callback);             // ফাইল/ফোল্ডারের নাম বদলায়
-fs.exists(path, callback);                         // কোনো ফাইল/পাথ আছে কিনা চেক করে
-fs.unlink(path, callback);                         // ফাইল ডিলিট করে
-fs.open(path, flags, [mode], callback);            // ফাইল ওপেন করে
-fs.mkdir(path, [mode], callback);                  // নতুন ফোল্ডার তৈরি করে
-fs.rmdir(path, callback);                          // ফোল্ডার মুছে ফেলে
-fs.readdir(path, callback);                        // ফোল্ডারের সব ফাইল লিস্ট করে
+- fs.readFile(fileName, [options], callback);       // ফাইল পড়ে (Async)
+- fs.writeFile(fileName, data, [options], callback); // ফাইল লিখে
+- fs.appendFile(file, data, [options], callback);    // ফাইলের শেষে ডেটা যোগ করে
+- fs.rename(oldPath, newPath, callback);             // ফাইল/ফোল্ডারের নাম বদলায়
+- fs.exists(path, callback);                         // কোনো ফাইল/পাথ আছে কিনা চেক করে
+- fs.unlink(path, callback);                         // ফাইল ডিলিট করে
+- fs.open(path, flags, [mode], callback);            // ফাইল ওপেন করে
+- fs.mkdir(path, [mode], callback);                  // নতুন ফোল্ডার তৈরি করে
+- fs.rmdir(path, callback);                          // ফোল্ডার মুছে ফেলে
+- fs.readdir(path, callback);                        // ফোল্ডারের সব ফাইল লিস্ট করে
 
 2️. Synchronous:
 ব্লকিং (ফাইল না পড়া পর্যন্ত পরের লাইন এক্সিকিউট হয় না)
 কোড সহজ কিন্তু বড় অ্যাপ্লিকেশনে ধীর গতি আনতে পারে
 ⏸️ Synchronous Methods (ব্লকিং)
-fs.readFileSync(fileName, [options]);              // ফাইল পড়ে (Sync)
-fs.writeFileSync(fileName, data, [options]);       // ফাইল লিখে
-fs.appendFileSync(file, data, [options]);          // ফাইলের শেষে ডেটা যোগ করে
-fs.renameSync(oldPath, newPath);                   // ফাইল/ফোল্ডারের নাম বদলায়
-fs.existsSync(path);                               // ফাইল/পাথ আছে কিনা চেক করে
-fs.unlinkSync(path);                               // ফাইল ডিলিট করে
-fs.openSync(path, flags, [mode]);                  // ফাইল ওপেন করে
-fs.mkdirSync(path, [mode]);                        // নতুন ফোল্ডার তৈরি করে
-fs.rmdirSync(path);                                // ফোল্ডার মুছে ফেলে
-fs.readdirSync(path);                              // ফোল্ডারের সব ফাইল লিস্ট করে
+- fs.readFileSync(fileName, [options]);              // ফাইল পড়ে (Sync)
+- fs.writeFileSync(fileName, data, [options]);       // ফাইল লিখে
+- fs.appendFileSync(file, data, [options]);          // ফাইলের শেষে ডেটা যোগ করে
+- fs.renameSync(oldPath, newPath);                   // ফাইল/ফোল্ডারের নাম বদলায়
+- fs.existsSync(path);                               // ফাইল/পাথ আছে কিনা চেক করে
+- fs.unlinkSync(path);                               // ফাইল ডিলিট করে
+- fs.openSync(path, flags, [mode]);                  // ফাইল ওপেন করে
+- fs.mkdirSync(path, [mode]);                        // নতুন ফোল্ডার তৈরি করে
+- fs.rmdirSync(path);                                // ফোল্ডার মুছে ফেলে
+- fs.readdirSync(path);                              // ফোল্ডারের সব ফাইল লিস্ট করে
 ### ✅ সংক্ষিপ্তভাবে:
-fs module = File System handle করার জন্য
-Asynchronous = Fast, non-blocking, callback-based
-Synchronous = Slow, blocking, simple
+- fs module = File System handle করার জন্য
+- Asynchronous = Fast, non-blocking, callback-based
+-Synchronous = Slow, blocking, simple
 ছোট প্রজেক্টে Synchronous চলবে, বড় প্রজেক্টে Asynchronous উত্তম।
 📌 note: [Rabbil Hasan YouTube] class-10
 ### 3rd Day Code Practice:
@@ -166,3 +166,5 @@ Synchronous = Slow, blocking, simple
 
 ### 3rd Day Code Practice:
 - 📌 fs File Write (Synchronous): day4-fs-module-node>index.js
+- 📌 fs Rename File (Aynchronous): day4-fs-module-node>index.js
+- 📌 fs Rename File (Synchronous): day4-fs-module-node>index.js
