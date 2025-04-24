@@ -168,3 +168,8 @@ fs Module হলো Node.js এর Core Module, যার মাধ্যমে 
 - 📌 fs File Write (Synchronous): day4-fs-module-node>index.js
 - 📌 fs Rename File (Aynchronous): day4-fs-module-node>index.js
 - 📌 fs Rename File (Synchronous): day4-fs-module-node>index.js
+
+
+## 📅 DAY 5
+- 📌 fs File Delete Operation (Aynchronous): day5-fs-module-node>index.js
+- 📌 fs File Delete Operation (Synchronous): day5-fs-module-node>index.js
