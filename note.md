@@ -171,5 +171,7 @@ fs Module হলো Node.js এর Core Module, যার মাধ্যমে 
 
 
 ## 📅 DAY 5
-- 📌 fs File Delete Operation (Aynchronous): day5-fs-module-node>index.js
-- 📌 fs File Delete Operation (Synchronous): day5-fs-module-node>index.js
+- 📌 fs File Delete Operation (Aynchronous): day5-fs-module-node-part-1>index.js
+- 📌 fs File Delete Operation (Synchronous): day5-fs-module-node-part-1>index.js
+- 📌 fs File Exists Operation (Aynchronous): day5-fs-module-node-part-1>index.js
+- 📌 fs File Exists Operation (Synchronous): day5-fs-module-node-part-1>index.js

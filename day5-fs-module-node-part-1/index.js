@@ -6,7 +6,7 @@ let server = http.createServer((req, res) => {
     if (req.url == "/") {
 
         //Asynchronous File Delete Operation
-        let writeFileAsync = () => {
+        let deletFileAsync = () => {
 
             fs.unlink("demo.txt", (error) => {
                 if (error) {
@@ -23,7 +23,7 @@ let server = http.createServer((req, res) => {
         };
 
         //Synchronous File Delete Operation
-        let writeFileSync = () => {
+        let deletFileSync = () => {
 
             let error = fs.unlinkSync("index.txt");
 
@@ -39,7 +39,33 @@ let server = http.createServer((req, res) => {
             }
         };
 
-        writeFileSync();
+        //Asynchronous File Exists Operation
+        let existsFileAsync = () => {
+
+            fs.exists("demo.txt", (result) => {
+                if (result) {
+                    res.end("Frle Exists");
+                }
+                else {
+                    res.end("Frle Not Exists");
+                }
+            })
+        };
+
+        //Synchronous File Exists Operation
+        let existsFileSync = () => {
+
+            let result = fs.existsSync("demo.txt");
+
+            if (result) {
+                res.end("true");
+            }
+            else {
+                res.end("false");
+            }
+        };
+
+        existsFileAsync();
     };
 
 });
