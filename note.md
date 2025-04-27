@@ -234,7 +234,12 @@ MySQL হলো একটি Relational Database Management System (RDBMS)
 
 ## 📅 DAY 7
 
-### 6th Day Code Practice:
-- 📌 Create Connection With MySQL: day6+day7-node-with-MySQL>index.js
-- 📌 Create Connection & Data Insert Node MySQL: day6+day7-node-with-MySQL>index.js
-- 📌 Data Update and Delete Node MySQL: day6+day7-node-with-MySQL>index.js
+### 7th Day Code Practice:
+- 📌 Create Connection With MySQL: day6+day7+day8-node-with-MySQL>index.js
+- 📌 Create Connection & Data Insert Node MySQL: day6+day7+day8-node-with-MySQL>index.js
+- 📌 Data Update and Delete Node MySQL: day6+day7+day8-node-with-MySQL>index.js
+
+## 📅 DAY 8
+
+### 8th Day Code Practice:
+- 📌 Data Select Node MySQL: day6+day7+day8-node-with-MySQL>index.js

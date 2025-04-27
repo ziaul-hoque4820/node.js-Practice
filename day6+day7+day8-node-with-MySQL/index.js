@@ -17,7 +17,8 @@ con.connect((error) => {
         console.log("connection success");
         // insertData(con);
         // deleteDataById(con);
-        updateData(con);
+        // updateData(con);
+        selectData(con);
     }
 });
 
@@ -64,4 +65,15 @@ let updateData = (con) => {
     })
 }
 
+let selectData = (con) => {
+    let SQLQuery = "SELECT * FROM `students_list`"
 
+    con.query(SQLQuery, (error, result) => {
+        if(error){
+            console.log("Data Select Fail");
+        }
+        else{
+            console.log(result);
+        }
+    })
+}
