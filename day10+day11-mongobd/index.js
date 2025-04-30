@@ -8,7 +8,9 @@ async function connectToMongoDB() {
         await client.connect();
         console.log("Connection Success");
 
-        await InsertData(client);
+        // await InsertData(client);
+        // await DeleteData(client);
+        await UpdateData(client);
 
         await client.close();
     } catch (error) {
@@ -23,7 +25,7 @@ async function InsertData (client) {
 
         let myCollection = myDataBase.collection('students');
     
-        let myData = { name: "Ziaul Hoque", Roll: "01", Class: "Ten", City: "Cumilla"}
+        let myData = { name: "Jannatul Ripa", Roll: "05", Class: "Ten", City: "Cumilla"}
         
         let result = await myCollection.insertOne(myData);
         console.log( 'Data Insert Success with_id:', result.insertedId);
@@ -33,3 +35,44 @@ async function InsertData (client) {
     };
     
 };
+
+async function DeleteData(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
+
+        const filter = { Roll: "01" };
+
+        const result = await collection.deleteOne(filter);
+
+        if (result.deletedCount > 0) {
+            console.log(" Data Deleted Successfully");
+        } else {
+            console.log("No Data Deleted");
+        }
+
+    } catch (error) {
+        console.error("Delete Failed:", error.message);
+    }
+}
+
+async function UpdateData(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
+
+        const filter = { Roll: "03" };
+        const update = { $set: { City: "Dhaka" } };
+
+        const result = await collection.updateOne(filter, update);
+
+        if (result.modifiedCount > 0) {
+            console.log("Data Updated");
+        } else {
+            console.log("No Data Updated");
+        }
+
+    } catch (error) {
+        console.error("Update Failed:", error.message);
+    }
+}

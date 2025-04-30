@@ -318,5 +318,7 @@ MongoDB Atlas হলো MongoDB এর Cloud Hosting সার্ভিস।
 
 ### 10th Day Code Practice:
 - 📌 Connect & InsertData with MongoDB Compass: day10+day11-MongoDB>index.js
+- 📌 Connect & Data Update with MongoDB Compass: day10+day11-MongoDB>index.js
+- 📌 Connect & Data Delete with MongoDB Compass: day10+day11-MongoDB>index.js
 
 
