@@ -310,3 +310,13 @@ MongoDB Atlas হলো MongoDB এর Cloud Hosting সার্ভিস।
 - Understanding about MongoDB Atlas
 - Create Clusters
 - Connect with MongoDB Compass
+
+### 10th Day Code Practice:
+- 📌 Connect with MongoDB Compass: day10-node>index.js
+
+## 📅 DAY 11
+
+### 10th Day Code Practice:
+- 📌 Connect & InsertData with MongoDB Compass: day10+day11-MongoDB>index.js
+
+
