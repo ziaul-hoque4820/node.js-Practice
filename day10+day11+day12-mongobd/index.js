@@ -10,7 +10,8 @@ async function connectToMongoDB() {
 
         // await InsertData(client);
         // await DeleteData(client);
-        await UpdateData(client);
+        // await UpdateData(client);
+        await ReadData(client);
 
         await client.close();
     } catch (error) {
@@ -74,5 +75,20 @@ async function UpdateData(client) {
 
     } catch (error) {
         console.error("Update Failed:", error.message);
+    }
+}
+
+async function ReadData(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
+
+        const results = await collection.find({}).toArray();
+
+        console.log("All Students:");
+        console.log(results);
+
+    } catch (error) {
+        console.error("Read Failed:", error.message);
     }
 }
