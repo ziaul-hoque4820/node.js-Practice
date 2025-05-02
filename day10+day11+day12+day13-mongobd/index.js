@@ -12,7 +12,9 @@ async function connectToMongoDB() {
         // await DeleteData(client);
         // await UpdateData(client);
         // await ReadData(client);
-        await FindData(client)
+        // await FindData(client);
+        // await FindDataWithQuery(client);
+        await FindDataWithProjection(client);
 
         await client.close();
     } catch (error) {
@@ -115,4 +117,50 @@ async function FindData(client) {
         console.error("Find Failed:", error.message);
     }
 }
+
+async function FindDataWithQuery(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
+
+        const query = { Class: "Ten" };
+
+        const result = await collection.find(query).toArray();
+
+        if (result.length > 0) {
+            console.log("Query Result:");
+            console.log(result);
+        } else {
+            console.log("No Matching Data Found");
+        }
+
+    } catch (error) {
+        console.error("Find Query Failed:", error.message);
+    }
+}
+
+async function FindDataWithProjection(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
+
+        const projection = { projection: { name: 1, City: 1, _id: 0 } };
+
+        const result = await collection.find({}, projection).toArray();
+
+        if (result.length > 0) {
+            console.log("Projection Result:");
+            console.log(result);
+        } else {
+            console.log("No Data Found");
+        }
+
+    } catch (error) {
+        console.error("Find Projection Failed:", error.message);
+    }
+}
+
+
+
+
 
