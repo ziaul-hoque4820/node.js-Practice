@@ -11,7 +11,8 @@ async function connectToMongoDB() {
         // await InsertData(client);
         // await DeleteData(client);
         // await UpdateData(client);
-        await ReadData(client);
+        // await ReadData(client);
+        await FindData(client)
 
         await client.close();
     } catch (error) {
@@ -92,3 +93,26 @@ async function ReadData(client) {
         console.error("Read Failed:", error.message);
     }
 }
+
+
+async function FindData(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
+
+        const query = { Roll: "01" };
+
+        const result = await collection.find(query).toArray();
+
+        if (result.length > 0) {
+            console.log("Found Data:");
+            console.log(result);
+        } else {
+            console.log("No Data Found");
+        }
+
+    } catch (error) {
+        console.error("Find Failed:", error.message);
+    }
+}
+
