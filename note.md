@@ -330,3 +330,8 @@ MongoDB Atlas হলো MongoDB এর Cloud Hosting সার্ভিস।
 
 ### 13th Day Code Practice:
 - 📌 Connect & Data Find with MongoDB Compass: day10+day11+day12+day13-MongoDB>index.js
+
+## 📅 DAY 14
+
+### 14th Day Code Practice:
+- 📌 Connect & Data Find Limit with MongoDB Compass: day10+day11+day12+day13-MongoDB>index.js

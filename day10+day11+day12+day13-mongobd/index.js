@@ -14,7 +14,11 @@ async function connectToMongoDB() {
         // await ReadData(client);
         // await FindData(client);
         // await FindDataWithQuery(client);
-        await FindDataWithProjection(client);
+        // await FindDataWithProjection(client);
+        await FindDataWithLimit(client);
+
+        
+
 
         await client.close();
     } catch (error) {
@@ -160,7 +164,20 @@ async function FindDataWithProjection(client) {
     }
 }
 
+async function FindDataWithLimit(client) {
+    try {
+        const myDataBase = client.db("school");
+        const collection = myDataBase.collection("students");
 
+        const result = await collection.find().limit(3).toArray();
+
+        console.log("Only 3 Documents Found:");
+        console.log(result);
+
+    } catch (error) {
+        console.error("Find With Limit Failed:", error.message);
+    }
+}
 
 
 
